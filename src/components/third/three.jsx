@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 
-const Second = () => {
+const Third = () => {
     const [answer, setAnswer] = useState('');
     const [obfuscatedKey, setObfuscatedKey] = useState(''); 
     const navigate = useNavigate();
@@ -10,7 +10,7 @@ const Second = () => {
 
     const handleNextClick = () => {
         if (answer === '1445') {
-            navigate('/third'); 
+            navigate('/second'); 
         } else {
             alert('OOPs Secrets scattered, prowess required.');
         }
@@ -24,20 +24,18 @@ const Second = () => {
             transition={{ duration: 1 }}
             className="relative flex flex-col items-center justify-center bg-black h-screen font-mono"
          >
+
             <p className='md:block sm:hidden text-white'>
-                Sometimes small things are the things that need to be noticed 
+                Information should be free to everyone 
             </p>
-
-            <p className='text-transparent'>
-                key to Akhet is :- <span className="text-black">the path you already visited</span>
+            <p className='text-white md:px-32 mt-10'>
+            The light of truth must shine unbound, for in the darkened corners where secrets dwell, only chains are forged. Break the seals of hidden knowledge, and let wisdom flow freely, as it was meant to be. Those who seek to hoard the light shall find only shadows in their grasp. The key lies in the open, yet only the worthy shall see.
             </p>
-
-            <p className='hidden'>
-                https://en.wikipedia.org/wiki/Akhet_(hieroglyph)
+            <p className='md:block sm:hidden text-white italic mt-2'>
+                Liber Primus in its orignal condition is the way.
             </p>
-
-            <p className='md:hidden sm:block text-white'>
-                The answer lies in the void 
+            <p className='italics text-white mt-4'>
+                Whisper not, or face the wrath of shadows.
             </p>
 
             <div className="absolute bottom-10 right-10 flex items-center justify-end">
@@ -45,7 +43,6 @@ const Second = () => {
                     type="text"
                     value={answer}
                     onChange={(e) => setAnswer(e.target.value)}
-                    placeholder='let the sun rise'
                     className={`rounded ${bgColor} border border-[0.1px] pl-5 border-slate-600 text-black`}
                 />
                 <button
@@ -60,4 +57,4 @@ const Second = () => {
     );
 };
 
-export default Second;
+export default Third;
